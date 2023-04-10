@@ -1,0 +1,18 @@
+<div class="root">
+    <h2>{{myProduct.title | uppercase}}</h2>
+    <img src={{myProduct.imageUrl}} style="width: 300px">
+    <p>{{myProduct.description}}</p>
+    <p>Date d'ajout : {{myProduct.date | date: 'fullDate':'+0200':'fr'}}</p>
+    <p>Plusieurs tailles disponibles</p>
+    <select (change)="onSizeSelected($event)">
+        <option *ngFor="let cur of myProduct.price" [value]="cur.price">{{cur.size}}</option>
+    </select>
+    <div class="price-likes">
+        <br>
+        <b>{{priceSelected | currency:'EUR'}} €</b>
+        <p>
+            <b>{{myProduct.likes}} ❤ </b>
+            <button (click)="onAddLike()">Like</button>
+        </p>
+    </div>
+</div>
