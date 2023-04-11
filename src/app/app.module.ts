@@ -13,7 +13,7 @@ import { SortByNamePipe } from './pipes/sort-by-name.pipe';
 import { ProductsListComponent } from './products-list/products-list.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { SortByNameListPipe } from './pipes/sort-by-name-list.pipe';
 registerLocaleData(localeFr);
 
 @NgModule({
@@ -25,7 +25,7 @@ registerLocaleData(localeFr);
     ProductsListComponent,
     HeaderComponent,
     FooterComponent,
-    ProductDetailComponent
+    SortByNameListPipe,
   ],
     exports:[
         SortByDatePipe
@@ -35,7 +35,7 @@ registerLocaleData(localeFr);
         AppRoutingModule,
         FormsModule,
         BrowserAnimationsModule,
-        MatSliderModule
+        MatSliderModule,
     ],
   providers: [{
     provide: LOCALE_ID,

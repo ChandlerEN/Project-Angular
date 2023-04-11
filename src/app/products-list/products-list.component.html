@@ -1,12 +1,19 @@
 <div style="text-align:center" class="content">
   <h1>
-    Welcome to Angular!
+    Welcome to the Samsung Store!
   </h1>
-  <div>
-    Chercher : <input type="text" id="search" name="search" [(ngModel)]="search"/>
+
+  <div class="search-bar">
+    <div>
+      <input type="text" id="search" name="search" [(ngModel)]="search" placeholder="Recherche..."/>
+    </div>
+  <!--  <div>La recherche : {{search}}</div>-->
+    <div class="sort-by-name">
+      <button class="sort-by-name-button" (click)="SortOrder()">Sort by name</button>
+    </div>
   </div>
-  <div>La recherche : {{search}}</div>
-  <div class="products">
-    <app-product-card *ngFor="let product of (products | sortByDate:'asc' | sortByName:search)" [myProduct]="product"></app-product-card>
+
+  <div class="products-list">
+    <app-product-card *ngFor="let product of (products | sortByNameList: order | sortByName:search)" [myProduct]="product" class="products"></app-product-card>
   </div>
 </div>

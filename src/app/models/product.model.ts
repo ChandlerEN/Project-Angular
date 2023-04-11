@@ -11,7 +11,7 @@ export class Product {
         public imageUrl: string,
         public date: Date,
         public price: Array<SizePrice>,
-        public likes: number,
+        public likeStatus: string,
         public isLiked: boolean
     ){}
 }

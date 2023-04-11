@@ -16,7 +16,7 @@ export class ProductCardComponent {
     this.productsService.onAddLike(this.myProduct);
   }
 
-  priceSelected: number = 2300;
+  priceSelected: number = 400;
   onSizeSelected(e: any) {
     this.priceSelected = e.target.value;
   }

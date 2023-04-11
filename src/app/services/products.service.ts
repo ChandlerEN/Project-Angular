@@ -8,43 +8,53 @@ export class ProductsService {
   products: Product[] = [
     new Product(
         1,
-        'Arrietty',
-        'Un film Ghibli',
-        'https://toutelaculture.com/wp-content/uploads/2011/01/affiche6.jpg',
-        new Date('2021-01-01'),
-        [{size: 'XL', price: 2300}, {size: 'L', price: 2500}, {size: 'M', price: 2700}, {size: 'S', price: 2900}, {size: 'XS', price: 3100}],
-        0,
+        'Samsung Galaxy S20',
+        'Téléphone haute gamme de Samsung.',
+        'https://med.csmobiles.com/500170-large_default/samsung-galaxy-s20-fe-g780-128gb-dual-sim-blanco.jpg',
+        new Date('2020-01-20'),
+        [{size: 'FE', price: 400}, {size: 'CLASSIQUE', price: 500}, {size: 'ULTRA', price: 900}],
+        "🤍",
+        false
+    ),
+    new Product(
+        1,
+        'Samsung Galaxy S23',
+        'Téléphone haute gamme de Samsung.',
+        'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61xk5l4aXOL._AC_SS450_.jpg',
+        new Date('2023-01-16'),
+        [{size: 'FE', price: 400}, {size: 'CLASSIQUE', price: 600}, {size: 'ULTRA', price: 900}],
+        "🤍",
         false
     ),
     new Product(
         2,
-        'Chai pas',
-        'Pas un film Ghibli',
-        'https://toutelaculture.com/wp-content/uploads/2011/01/affiche10.jpg',
-        new Date('2021-04-11'),
-        [{size: 'XL', price: 2300}, {size: 'L', price: 2500}, {size: 'M', price: 2700}, {size: 'S', price: 2900}, {size: 'XS', price: 3100}],
-        0,
+        'Samsung Galaxy S21',
+        'Téléphone haute gamme de Samsung.',
+        'https://media.ldlc.com/r1600/ld/products/00/05/92/04/LD0005920487_1.jpg',
+        new Date('2021-01-18'),
+        [{size: 'FE', price: 400}, {size: 'CLASSIQUE', price: 600}, {size: 'ULTRA', price: 900}],
+        "🤍",
         false
     ),
     new Product(
         3,
-        'Chai pas',
-        'Pas un film Ghibli',
-        'https://toutelaculture.com/wp-content/uploads/2011/01/affiche15.jpg',
-        new Date('2022-10-22'),
-        [{size: 'XL', price: 2300}, {size: 'L', price: 2500}, {size: 'M', price: 2700}, {size: 'S', price: 2900}, {size: 'XS', price: 3100}],
-        0,
+        'Samsung Galaxy S22',
+        'Téléphone haute gamme de Samsung.',
+        'https://media.ldlc.com/r1600/ld/products/00/05/92/88/LD0005928897_1.jpg',
+        new Date('2022-01-17'),
+        [{size: 'FE', price: 400}, {size: 'CLASSIQUE', price: 600}, {size: 'ULTRA', price: 900}],
+        "🤍",
         false
     ),
   ]
 
   onAddLike(products: Product): void {
     if (products.isLiked) {
-      products.likes--;
+      products.likeStatus = "🤍";
     }
     else
     {
-      products.likes++;
+      products.likeStatus = "❤️";
     }
     products.isLiked = !products.isLiked;
   }
