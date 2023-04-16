@@ -17,16 +17,6 @@ export class ProductsService {
         false
     ),
     new Product(
-        1,
-        'Samsung Galaxy S23',
-        'Téléphone haute gamme de Samsung.',
-        'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61xk5l4aXOL._AC_SS450_.jpg',
-        new Date('2023-01-16'),
-        [{size: 'FE', price: 400}, {size: 'CLASSIQUE', price: 600}, {size: 'ULTRA', price: 900}],
-        "🤍",
-        false
-    ),
-    new Product(
         2,
         'Samsung Galaxy S21',
         'Téléphone haute gamme de Samsung.',
@@ -42,6 +32,16 @@ export class ProductsService {
         'Téléphone haute gamme de Samsung.',
         'https://media.ldlc.com/r1600/ld/products/00/05/92/88/LD0005928897_1.jpg',
         new Date('2022-01-17'),
+        [{size: 'FE', price: 400}, {size: 'CLASSIQUE', price: 600}, {size: 'ULTRA', price: 900}],
+        "🤍",
+        false
+    ),
+    new Product(
+        4,
+        'Samsung Galaxy S23',
+        'Téléphone haute gamme de Samsung.',
+        'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61xk5l4aXOL._AC_SS450_.jpg',
+        new Date('2023-01-16'),
         [{size: 'FE', price: 400}, {size: 'CLASSIQUE', price: 600}, {size: 'ULTRA', price: 900}],
         "🤍",
         false
